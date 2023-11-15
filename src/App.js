@@ -9,7 +9,9 @@ const Container = styled.div`
 display : flex
 `
 const Main = styled.div`
-flex : 7
+flex : 7;
+background-color : ${({theme }) => theme.bg};
+color : ${({theme }) => theme.text};
 `
 const Wrapper = styled.div`
 `
