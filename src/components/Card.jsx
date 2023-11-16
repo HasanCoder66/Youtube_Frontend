@@ -4,26 +4,28 @@ import {Link} from 'react-router-dom'
 // import ProfileCard from '../img/Profile_FB.png'
 
 const Container = styled.div`
-witdh : 300px
-  // width: ${(props) => props.type !== "sm" && "360px"};
-  margin-bottom: ${(props) => (props.type === "sm" ? "10px" : "45px")};
+  width :${(prop) => prop.type !== 'sm' && '360px'}
+  margin-bottom: ${(prop) => prop.type === 'sm' ? '10px' : '45px'};
   cursor: pointer;
-  display: ${(props) => props.type === "sm" && "flex"};
+  display: ${(prop) => prop.type === "sm" && "flex"};
   gap: 10px;
 `;
 
 const Image = styled.img`
   width: 100%;
-  height: ${(props) => (props.type === "sm" ? "120px" : "202px")};
+  height: ${(prop) => (prop.type === 'sm' ? "120px" : "202px")};
   background-color: #999;
   flex: 1;
+  margin: 5px 0px;
+  display :${(prop) => prop.type === 'sm' && 'flex'}
 `;
 
 const Details = styled.div`
   display: flex;
-  margin-top: ${(props) => props.type !== "sm" && "16px"};
+  margin-top: ${(prop) => prop.type !== "sm" && "16px"};
   gap: 12px;
   flex: 1;
+  margin: 5px 0px;
 `;
 
 const ChannelImage = styled.img`
@@ -31,7 +33,7 @@ const ChannelImage = styled.img`
   height: 36px;
   border-radius: 50%;
   background-color: #999;
-  display: ${(props) => props.type === "sm" && "none"};
+  display:${(prop) => prop.type === 'sm' && 'none' }
 `;
 
 const Texts = styled.div``;
@@ -53,14 +55,14 @@ const Info = styled.div`
   color: ${({ theme }) => theme.textSoft};
 `;
 
-function Card() {
+function Card({type}) {
   return (
     <Link to='/video/test' style={{textDecoration:'none'}}>
-    <Container>
-      <Image src='https://scontent.fkhi4-2.fna.fbcdn.net/v/t39.30808-1/396199148_856108126102706_5721945219804232938_n.jpg?stp=dst-jpg_p200x200&_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEMifrV-LFicFT1fdC2HANQ6nzycmJMQg7qfPJyYkxCDr1Ti3FTt9Cu1taJc7SnqHUgK4Byk54-yloFNGNgnEjE&_nc_ohc=MGkksE53dvUAX-oVao8&_nc_ht=scontent.fkhi4-2.fna&oh=00_AfAtgRkfDGxdmR1pbnOulyvRwNvd_FV75gacFcthVy7Zgw&oe=655B071B' alt="TechTube"/>
+    <Container type={type}>
+      <Image type={type} src='https://scontent.fkhi4-2.fna.fbcdn.net/v/t39.30808-1/396199148_856108126102706_5721945219804232938_n.jpg?stp=dst-jpg_p200x200&_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEMifrV-LFicFT1fdC2HANQ6nzycmJMQg7qfPJyYkxCDr1Ti3FTt9Cu1taJc7SnqHUgK4Byk54-yloFNGNgnEjE&_nc_ohc=MGkksE53dvUAX-oVao8&_nc_ht=scontent.fkhi4-2.fna&oh=00_AfAtgRkfDGxdmR1pbnOulyvRwNvd_FV75gacFcthVy7Zgw&oe=655B071B' alt="TechTube"/>
       
-      <Details>
-    <ChannelImage 
+      <Details type={type}>
+    <ChannelImage type={type}
     src='https://scontent.fkhi4-3.fna.fbcdn.net/v/t39.30808-6/344859260_9764027536941505_5188833060278820647_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeH7vxBxRC8BIXXDfKxmKp_QIQqlHeM23VkhCqUd4zbdWUQP10T73idj9leNJ4HhuNE3NEJ2L2biQphwS3SpwqfO&_nc_ohc=3TM3CYEXFkkAX-funxn&_nc_oc=AQnOQI5daeQ2P505wzkCi-c2KshZsL6ZngBHzWyMz9h6XsgFOc-7lM0hCL1htJZyJ6k&_nc_zt=23&_nc_ht=scontent.fkhi4-3.fna&oh=00_AfCrK8pdmWGoUXgVZ9svwCRl8r_koUJOgFx21oIKR97d9w&oe=655AC81F' alt="TechTube"/>
     <Texts>
       <Title>
@@ -69,7 +71,7 @@ function Card() {
       <ChannelName>
         TechCode
       </ChannelName>
-      <Info>1,000,000,000 views in one day top #1 trending</Info>
+      <Info>1,0913,8000 views </Info>
     </Texts>
       </Details>
     </Container>
