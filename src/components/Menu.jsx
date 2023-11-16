@@ -17,6 +17,7 @@ import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import FlagOutlinedIcon from "@mui/icons-material/FlagOutlined";
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import SettingsBrightnessOutlinedIcon from "@mui/icons-material/SettingsBrightnessOutlined";
+import { Link } from "react-router-dom";
 // import { Link } from "react-router-dom";
 
 
@@ -91,10 +92,12 @@ function Menu({setDarkMode , darkMode}) {
   return (
     <Container>
       <Wrapper>
+      <Link to='/video/test' style={{textDecoration:'none' , color:'inherit'}}>
         <Logo>
           <Img src={logo} alt="logo is here" />
           TechTube
         </Logo>
+        </Link>
         <Item>
           <HomeIcon />
           Home

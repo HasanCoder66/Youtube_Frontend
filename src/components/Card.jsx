@@ -1,9 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
+import {Link} from 'react-router-dom'
 // import ProfileCard from '../img/Profile_FB.png'
 
 const Container = styled.div`
-  width: ${(props) => props.type !== "sm" && "360px"};
+witdh : 300px
+  // width: ${(props) => props.type !== "sm" && "360px"};
   margin-bottom: ${(props) => (props.type === "sm" ? "10px" : "45px")};
   cursor: pointer;
   display: ${(props) => props.type === "sm" && "flex"};
@@ -53,6 +55,7 @@ const Info = styled.div`
 
 function Card() {
   return (
+    <Link to='/video/test' style={{textDecoration:'none'}}>
     <Container>
       <Image src='https://scontent.fkhi4-2.fna.fbcdn.net/v/t39.30808-1/396199148_856108126102706_5721945219804232938_n.jpg?stp=dst-jpg_p200x200&_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEMifrV-LFicFT1fdC2HANQ6nzycmJMQg7qfPJyYkxCDr1Ti3FTt9Cu1taJc7SnqHUgK4Byk54-yloFNGNgnEjE&_nc_ohc=MGkksE53dvUAX-oVao8&_nc_ht=scontent.fkhi4-2.fna&oh=00_AfAtgRkfDGxdmR1pbnOulyvRwNvd_FV75gacFcthVy7Zgw&oe=655B071B' alt="TechTube"/>
       
@@ -66,10 +69,11 @@ function Card() {
       <ChannelName>
         TechCode
       </ChannelName>
-      <Info>1 billion views in one day top #1 trending</Info>
+      <Info>1,000,000,000 views in one day top #1 trending</Info>
     </Texts>
       </Details>
     </Container>
+    </Link>
   )
 }
 
